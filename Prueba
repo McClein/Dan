@@ -1,0 +1,39 @@
+################
+# Prompt Excel #
+################
+Genera una fórmula de excel en español usando ";" como separador de variables y "," como separador de decimales, considerando las siguientes variables:
+- Salario, en euros, en E3.
+- Ventas, en euros, F3.
+- Fecha de contratación, en formato fecha, en D3.
+Si la fecha de contratación es menos de dos años anterior a la fecha actual, el bonus es del 7%. Si está entre 2 y 4 años, del 10%. Si lleva más de 4 años contratado, 20% de bonus. El bonus se aplica sobre las ventas en F3.
+Devuelve el resultado de la suma del salario y el bonus obtenido.
+
+#################
+# Prompt Python #
+#################
+Supongamos que el bonus por ventas de la plantilla depende de la antiguedad de cada persona en la empresa.
+Para contratos inferiores a 2 año el bonus por ventas es del 7%.
+Para contrtos entre 2 y 4 años, el bonus es del 10%.
+Para contratos de más de 4 años, el bonus es del 20%.
+Escribe un programa en python que solicite la fecha de contratación de un empleado, su salario base anual en euros y el total de ventas acumuladas en un año en euros.
+El programa debe calcular cuantos años lleva trabajando el empleado en la empresa con precisión de días, es decir, diferencia de días entre la fecha actual y la de contatación dividida entre 365.
+El bonus que recibirá el empleado será el porcentaje de bonus en base a su antiguedad respecto del total de ventas alcanzado.
+El programa debe devolver el resultado de sumar el salario base al bonus obtenido por las ventas totales del año en base a su antigüedad.
+
+########################
+# Prompt Power Query M #
+########################
+Supongamos un archivo CSV con las siguientes columnas:
+- Nombre: tipo texto.
+- Apellido: tipo texto.
+- Fecha de contratación: tipo fecha en formato "aaaa-mm-dd".
+- Salario base: tipo divisa en euros.
+- Ventas anuales:  tipo divisa en euros.
+Genera un código Power Query M para importar dicho archivo CSV en excel de forma qué:
+- La fecha de contratación con localización "es_ES".
+- Los valoresde "Salario base" y "Ventas totales" sean de tipo deivisa con localización "es_ES".
+- Añada una columna, con título "Bonus" indicando el porcentaje de bonus a que tiene derecho en función de la antiguedad siendo 7% para cntratos de menos de 2 años, 10% para contratos de 2 a 4 años y 20% para contratos de más de 4 años.
+- Añada una columna con título "Bonus total" con valor en euros que resulte de aplicar el porcentaje de bonus a las "Ventas totales".
+- Añada una columna titulada "Total", que sea el resultado de sumar el "bonus total" al "salario base".
+- Ordena la lista por orden de mayor a menor en base al pago total.
+- Filtra los resultados para mostrar sólo los casos en que el pago total esté entre 60000 y 80000€.
